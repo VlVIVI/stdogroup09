@@ -1,0 +1,148 @@
+<head>
+  <!--bootstrap met en forme le document -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
+  <!-- style.css personnalise la mise en forme du document -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!--utilise le document "scripts.js" pour effectuer des scriptes-->
+   <script src="scripts.js"></script> 
+  
+  <!-- script pour faire défiler le document vers les sections -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){ //quand le document est près, executer la fonction:
+      $(".section-box").click(function(){//quand un élement avec la classe "section box" est cliqué, executer la fonction:
+        $('html, body').animate({ //animer le "body" du html avec les valeurs de la ligne suivante
+          scrollTop: $($(this).attr('href')).offset().top //scroll a partir du haut d'une valeure qui est la distance entre le haut et l'offset de l'élement qui a un id correspondant au "href" du bouton
+        }, 500); //le faire en 0.5 secondes
+      });
+    });
+  </script>
+
+<title>larry-page</title>
+</head>
+<body>
+    <!-- Ajout d'un sommaire -->
+<div class="container text-center">
+    <div class="title-box"> <!-- cette classe permet a la "boite" contenant le titre d'etre modifiée dans le css-->
+      <h1 id="title">Lawrence Edward Page dit Larry Page :</h1>
+      <div class="btn-group-vertical"> <!-- crées un boite verticale contenant des boutons grace a bootstrap -->
+        <button type="button" class="btn btn-secondary section-box bouton1" href="#section1">Origine de Larry Page</button> 
+<!--le "type:button" permet, grace a bootstrap de faire de ce bouton un bouton cliquable.
+la classe "btn" permet la modification des boutons dans le css.
+la classe "btn-secondary" permet, grace a bootstrap de mettre ce bouton dans la "<div>" précendente en tant que bouton.
+la classe "section-box" permet au script d'éxecuter la comande de déplacement grace au href qui lui permet de savoir ou aller-->
+        <button type="button" class="btn btn-secondary section-box bouton2" href="#section2">Origine et Création de Google</button>
+        <button type="button" class="btn btn-secondary section-box bouton3" href="#section3">Création de Page Rank</button>
+        <button type="button" class="btn btn-secondary section-box bouton4" href="#section4">Société mère Alphabet</button>
+        <!--ce bouton permet, quand cliqué, de renvoyer vers l'autre page appelée Informations croustillantes.html-->
+        <button type="button" class="btn btn-secondary bouton5" onclick="window.location.href='Informations croustillantes.html'">informations croustillantes</button>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- La div suivante utilise les classes bootstrap "container", "external" et "internal" pour mettre en forme le contenu du document -->
+    <div class="container external internal" id="content">
+        <div class="row"> <!-- cette classe permet, grâce a bootstrap, de mettre tout le contenu de ce <div> sur un nouvelle "ligne"-->
+            <div class="col-md-2"><!-- cette classe permet, grâce a bootstrap, de mettre tout le contenu de ce <div> sur une longueure de 2 "colones"-->
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTzHPuyGFVQCptFxNprKHpvu0u78I2ojaQaiiPkD0Ubq8DM6xqc" class="portrait1"> <!--css-->
+            </div>
+            <div class="col-md-10" id="section1" style="padding: 0 0 0 5%"> <!-- l'id permet au script de trouver les section précisées dans les href des boutons -->
+                <h2 class="texte11" >1) Origine de Larry Page</h2>
+                <p class="texte12">Larry Page, né le 26 mars 1973 dans le Michigan. Ses parents étaient des professeurs d'université spécialisés dans l'informatique et l'intelligence artificielle Gloria Weinstein née en 1944, professeure de programmation à l’Université du Michigan, et Carl V. Page né en 1938 et mort en 1996, professeur d’informatique et d’intelligence artificielle à l’Université de Caroline du Nord à Chapel Hill et à l’Université du Michigan. Carl Page est notamment un pionnier et une référence dans le domaine de l’intelligence artificielle.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="section2">
+                <h2 class="texte21">2) Origine et Création de Google</h2>
+                <p class="texte22"> Tout commence en 1995 à l'université de Stanford avec la rencontre de deux jeunes étudiants américains prometteurs : Larry Page et Sergey Brin. 
+                    Un an plus tard, c'est le lancement de BackRub, leur premier moteur de recherche alors hébergé par les serveurs de l'université. </p>
+                    <img src="images/b-ACKRUB2-2.jpg" width="100%" height="auto" class="illustration">
+                <p class="texte23">Donc, c'est le cofondateur de l'entreprise Google avec <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank">Sergey Brin</a>.<br>Sa passion pour la technologie a commencé très tôt, et il a obtenu un diplôme en génie informatique de l'Université du Michigan en 1995 avant de poursuivre ses études à l'Université Stanford.</p>
+
+              <img src="https://imageio.forbes.com/specials-images/imageserve/5c7d7c254bbe6f78090d831f/0x0.jpg?format=jpg&crop=2412,2414,x475,y168,safe&height=416&width=416&fit=bounds" class="portrait2" alt="Sergey Brin" width="10%" height="auto"><!--class: css-->
+            </div> 
+        <div class="row mt-4">
+            <div class="col" id="section3">
+                <h2 class="texte31">3) Création de Page Rank</h2>
+                <p class="texte32">Il est surtout connu pour être l'inventeur du procédé de classement des pages Web appelé PageRank ( Le PageRank est un algorithme utilisé par Google qui permet de mesurer la popularité d'un site ou d'une page web.), qui a été à la base de la création de Google. </p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/PageRanks-Example.svg/330px-PageRanks-Example.svg.png" alt="page rank" width="30%" height="auto" class="illustration">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col" id="section4">
+                <h2 class="texte41">4) Société mère Alphabet</h2>
+                <p class="texte42">En 2011, il est devenu le directeur général de Google et a ensuite dirigé la société mère Alphabet (C’est une entreprise américaine basée en Californie, créée en 2015 comme un ensemble de sociétés détenues par la société Google.) jusqu'en 2019.<br>Page est également engagé dans le mouvement transhumaniste (qui est un courant de pensée selon lequel les capacités physiques et intellectuelles de l'être humain pourraient être accrues grâce au progrès scientifique et technique).<br>En collaboration avec Sergey Brin, ils ont décidé de simplifier la structure de gestion d'Alp. </p>
+              <img src="images/Google-animated.gif" alt="google logo" width="50%" height="auto" style="padding: 0 1% 0" class="illustration">
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- "boite" du bas avec le logo et les listes -->
+<div class="bottom-box"> <!--pour le css-->
+  <img class="portrait1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Larry_Page_in_the_European_Parliament%2C_17.06.2009_%28cropped%29.jpg/220px-Larry_Page_in_the_European_Parliament%2C_17.06.2009_%28cropped%29.jpg" alt="larry">
+  <ul class="auteurs"> <!--pour le css-->
+    <li style="font-weight: bold">auteurs:</li>
+    <li> <a href="mailto:vjegaden@st-do.fr">Vivian JEGADEN</a></li>
+    <li><a href="mailto:scostagliola@st-do.fr">Sayam COSTAGLIOLA</a></li>
+    <li><a href="mailto:tmaitre@st-do.fr">Thomas MAITRE</a></li>
+    <li><a href="mailto:rnsidze@st-do.fr">Rita NSIDZE</a></li>
+    <li><a href="mailto:ochebance@st-do.fr">Oceane Chebance</a></li>
+  </ul>
+  <ul class="sources"> <!--pour le css-->
+    <li style="font-weight: bold">sources:</li>
+    <li><a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank">Wikipedia</a></li>
+    <li><a href="https://siecledigital.fr/2018/09/18/mais-ou-est-passe-larry-page/
+" target="_blank">Page Siècle Digital</a></li>
+    <li><a href="https://www.webrankinfo.com/dossiers/personnes/larry-page
+" target="_blank">Page Web Rank Info</a></li>
+  </ul>
+  <ul class="autres-pages"> <!--pour le css-->
+    <li style="font-weight: bold">autres pages:</li>
+    <li><a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank">Jeff Bezos</a></li>
+    <li><a href="https://siecledigital.fr/2018/09/18/mais-ou-est-passe-larry-page/
+" target="_blank">Page Siècle Digital</a></li>
+    <li><a href="https://www.webrankinfo.com/dossiers/personnes/larry-page
+" target="_blank">Page Web Rank Info</a></li>
+    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Page 5</a></li>
+  </ul>
+</div>
+
+
+<script>
+// Cette fonction anime la page pour faire défiler vers le haut
+function scrollToTop() {
+  $('html, body').animate({
+    scrollTop: 0 // Déplace la position de défilement vers le haut de la page
+  }, 500); // Durée de l'animation en millisecondes
+}
+
+// Cette fonction est appelée chaque fois que la page est défilée
+$(window).scroll(function() {
+  // Récupère les éléments pour le titre et le bouton
+  var titleBox = $('.title-box');
+  var overlay = $('.overlay');
+  // Récupère la position actuelle de défilement de la page
+  var scrollTop = $(window).scrollTop();
+  // Récupère la distance entre le haut de la page et le bas de l'élément titre
+  var titleBoxOffset = titleBox.offset().top + titleBox.outerHeight();
+  
+  // Si la position de défilement est supérieure à la distance entre le haut de la page et le bas de l'élément titre
+  if (scrollTop > titleBoxOffset) {
+    overlay.addClass('show-overlay'); // Ajoute une classe CSS pour afficher le calque de superposition
+  } else {
+    overlay.removeClass('show-overlay'); // Supprime la classe CSS pour masquer le calque de superposition
+  }
+});
+
+  
+</script>
+ <!--ajouter une image en bas a droite qui permet d'executer la fonction "scrolltotop" quand cliqué-->
+<div class="overlay" onclick="scrollToTop()">
+  <img width="60%" height="auto" src="images/fleche.png" alt="Flèche vers le haut">
+</div>
+</body>
